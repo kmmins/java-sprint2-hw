@@ -5,7 +5,6 @@ public class MonthlyReportRecord {
     public int sum;
 
     public MonthlyReportRecord(String itemName, boolean isExpense, int quantity, int sum) {
-
         this.itemName = itemName;
         this.isExpense = isExpense;
         this.quantity = quantity;

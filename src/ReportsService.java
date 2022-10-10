@@ -50,7 +50,6 @@ public class ReportsService {
             }
         }
     }
-
     public void showInfoY (){
 
         if (yearRep != null) {

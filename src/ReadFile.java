@@ -5,7 +5,6 @@ import java.nio.file.Path;
 public class ReadFile {
 
     public static String readFileContentsOrNull(String path) {
-
         try {
             return Files.readString(Path.of(path));
         } catch (IOException e) {
