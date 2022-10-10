@@ -38,6 +38,7 @@ public class Main {
             }
         }
     }
+
     public static void printMenu () {
         System.out.println("Что вы хотите сделать?");
         System.out.println("1 - Считать все месячные отчёты");

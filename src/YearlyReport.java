@@ -26,6 +26,7 @@ public class YearlyReport {
         System.out.println("Средний расход за все месяцы в году равен: " + sumLossYM / count + "руб.");
         System.out.println("Средний доход за все месяцы в году равен: " + sumProfitYM / count + "руб.");
     }
+
     /**
      * <p>Считывает информацию из файла .сsv годового отчета и преобразует ее в data</p>
      *

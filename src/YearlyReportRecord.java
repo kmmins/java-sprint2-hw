@@ -4,6 +4,7 @@ public class YearlyReportRecord {
     public int income;
 
     public YearlyReportRecord(int month) {
+
         this.month = month;
     }
 }
