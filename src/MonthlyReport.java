@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class MonthlyReport {
 
-    int sumExpensMonth;
+    int sumExpenseMonth;
     int sumIncomeMonth;
     int numberOfMonth;
     public ArrayList<MonthlyReportRecord> data = new ArrayList<>();
@@ -10,20 +10,22 @@ public class MonthlyReport {
     public MonthlyReport(int nMonth) {
         numberOfMonth = nMonth;
     }
+
     /**
-     * <p>Считает суммы расходов и доходов в месяц необходимые для сверки</p>
+     * <p>Считает суммы расходов и доходов в месяц необходимые для сверки.</p>
      */
     public void sverkaSumMonth() {
         for (MonthlyReportRecord element : data) {
             if (element.isExpense) {
-                sumExpensMonth += element.quantity * element.sum;
+                sumExpenseMonth += element.quantity * element.sum;
             } else {
                 sumIncomeMonth += element.quantity * element.sum;
             }
         }
     }
+
     /**
-     * <p>Выводит в консоль информацию по считанному месячному отчету</p>
+     * <p>Выводит в консоль информацию по считанному месячному отчету.</p>
      */
     public void infoMonth() {
         System.out.println("Рассматриваемый месяц: " + numberOfMonth);
@@ -45,15 +47,18 @@ public class MonthlyReport {
                 }
             }
         }
-        System.out.println("Самый прибыльный товар: " + maxProductName + ". Сумма оставила: " + maxProfitProduct + " руб.");
-        System.out.println("Самая большая трата называется: " + maxExpenceName + ". Сумма траты оставила: " + maxExpence + " руб.");
+        System.out.println("Самый прибыльный товар: " + maxProductName +
+                ". Сумма оставила: " + maxProfitProduct + " руб.");
+        System.out.println("Самая большая трата называется: " + maxExpenceName +
+                ". Сумма траты оставила: " + maxExpence + " руб.");
     }
+
     /**
-     * <p>Считывает информацию из файла .сsv месячного отчета и преобразует ее в data</p>
-     *
-     * * @param String path Путь к файлу в папке с программой
+     * <p>Считывает информацию из файла .сsv месячного отчета и преобразует ее в data.</p>
+     * <p>
+     * * @param String path Путь к файлу в папке с программой.
      */
-    public void loadFromFileContents (String path) {
+    public void loadFromFileContents(String path) {
         String fileContents = ReadFile.readFileContentsOrNull(path);
 
         String[] lines = fileContents.split("\r?\n");

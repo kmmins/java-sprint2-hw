@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Программа помошник Бухгалтера Парка Развлечений");
+        System.out.println("Программа помощник Бухгалтера Парка Развлечений");
         ReportsService reportsService = new ReportsService();
 
-
-        imOutOfHere: while (true) {
+        imOutOfHere:
+        while (true) {
             printMenu();
             int commandSwitch = scanner.nextInt();
             switch (commandSwitch) {
@@ -34,11 +35,13 @@ public class Main {
                 case 6:
                     System.out.println("Выход...");
                     break imOutOfHere;
-                default: System.out.println("Извините, такой команды пока нет");
+                default:
+                    System.out.println("Извините, такой команды пока нет");
             }
         }
     }
-    public static void printMenu () {
+
+    public static void printMenu() {
         System.out.println("Что вы хотите сделать?");
         System.out.println("1 - Считать все месячные отчёты");
         System.out.println("2 - Считать годовой отчёт");
